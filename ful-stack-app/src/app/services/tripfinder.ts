@@ -2,7 +2,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { City } from '../interface/city';
 import { tripadvisor } from '../interface/tripadvisor';
 
 @Injectable({
