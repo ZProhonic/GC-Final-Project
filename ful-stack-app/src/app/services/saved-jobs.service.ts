@@ -7,7 +7,7 @@ import { SavedJob } from '../interface/saved_job';
   providedIn: 'root'
 })
 export class SavedJobsService {
-  private apiUrl = 'https://localhost:7135/api/SavedJob';
+  private apiUrl = 'https://localhost:44305/api/SavedJob';
 
   constructor(private http: HttpClient) {}
 

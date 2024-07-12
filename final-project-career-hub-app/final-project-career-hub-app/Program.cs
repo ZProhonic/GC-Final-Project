@@ -15,9 +15,9 @@ builder.Services.AddControllers().AddJsonOptions(options =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<JobDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddDbContext<JobsDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddScoped<JobRepository>();
-builder.Services.AddScoped<JobDbContext>();
+builder.Services.AddScoped<JobsDbContext>();
 builder.Services.AddScoped<SavedJobRepository>();
 builder.Services.AddCors(options =>
 {
