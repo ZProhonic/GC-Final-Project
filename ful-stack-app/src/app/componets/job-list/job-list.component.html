@@ -1,5 +1,6 @@
 <!-- src/app/job-search/job-search.component.html -->
 <div class="container" *ngIf="jobs.length > 0 else noJobsTemplate">
+  <!-- structura directives -->
   <h2>Search Results</h2>
   <table>
     <thead>
@@ -15,31 +16,19 @@
     </thead>
     <tbody>
       <tr *ngFor ="let job of jobs" class="job-item">
-        <td>{{job.jobTitle}}</td>
+        <!-- iterates the array -->
+        <td>{{job.jobTitle}}</td> //interpolation syntax
         <td>{{job.companyName}}</td>
         <td>{{job.location}}</td>
         <td>{{job.salaryRange}}</td>
         <td>{{job.experienceLevel}}</td>
         <td>{{job.jobDescription}}</td>
         <td><button (click)="saveJob(job)" class="save-button">Save Job</button></td>
+        <!-- event binding click button save job -->
       </tr>
     </tbody>
   </table>
 </div>
-
-<!-- ASIDE -->
-<aside>
-  <ul>
-    <li><a [routerLink]="['/saved-jobs']">Saved Jobs</a></li>
-  </ul>
-  <ul>
-    <li><a [routerLink]="['/city-info']">City Information</a></li>
-  </ul>
-  <ul>
-    <li><a [routerLink]="['/job-search']">Job Search</a></li>
-  </ul>
-</aside>
-
 <ng-template #noJobsTemplate>
   <p>No jobs found. Try adjusting your search criteria.</p>
 </ng-template>
