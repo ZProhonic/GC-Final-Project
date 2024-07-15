@@ -11,7 +11,6 @@ public partial class SavedJob
 
     public int? JobId { get; set; }
 
-    public string? ApplicationStatus { get; set; }
-
     public virtual Job? Job { get; set; }
+    public string? ApplicationStatus { get; internal set; }
 }

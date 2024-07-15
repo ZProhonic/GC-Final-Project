@@ -5,9 +5,9 @@ namespace final_project_career_hub_app.DAL
 {
     public class SavedJobRepository
     {
-        private readonly JobDbContext _context;
+        private readonly JobsDbContext _context;
 
-        public SavedJobRepository(JobDbContext context)
+        public SavedJobRepository(JobsDbContext context)
         {
             _context = context;
         }
