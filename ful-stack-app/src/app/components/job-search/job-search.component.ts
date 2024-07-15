@@ -51,10 +51,11 @@ export class JobSearchComponent implements OnInit {
 
 
   saveJob(job: Job): void {
-    const userId = 1; // Assuming a static user ID
+    const userId = 1; 
     this.savedJobsService.saveJob(userId, job.jobId, 'Applied').subscribe(
       () => console.log('Job saved successfully'),
       error => console.error('Error saving job', error)
     );
   }
+
 }

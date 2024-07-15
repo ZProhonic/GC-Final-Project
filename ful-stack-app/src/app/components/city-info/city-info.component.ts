@@ -4,19 +4,21 @@ import { TripfinderService } from '../../services/tripfinder';
 import { FormsModule } from '@angular/forms';
 import { tripadvisor } from '../../interface/tripadvisor';
 import { CommonModule } from '@angular/common';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-city-info',
   templateUrl: './city-info.component.html',
   styleUrls: ['./city-info.component.css'],
   standalone: true,
-  imports: [FormsModule, CommonModule]
+  imports: [FormsModule, CommonModule, RouterModule]
 })
 export class CityInfoComponent implements OnInit {
   city: string = 'detroit';
   cityInfo: tripadvisor | any;
+  
 
-  constructor(private tripfinderService: TripfinderService) { }
+  constructor(private tripfinderService: TripfinderService, private router: Router) { }
 
   ngOnInit(): void {
     console.log(this.city);
@@ -35,5 +37,4 @@ export class CityInfoComponent implements OnInit {
     );
   }
 
-  title = 'my-first-app';
 }

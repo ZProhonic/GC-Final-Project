@@ -10,6 +10,16 @@
         <p>{{ item.address_obj?.address_string }}</p>
       </div>
     </div>
+
+    <!-- ASIDE -->
+  <aside>
+    <ul>
+      <li><a [routerLink]="['/saved-jobs']">Saved Jobs</a></li>
+    </ul>
+    <ul>
+      <li><a [routerLink]="['/job-search']">Job Search</a></li>
+    </ul>
+  </aside>
     <div *ngIf="!cityInfo.data || cityInfo.data.length === 0">
       <p>No data available for the specified city.</p>
     </div>
