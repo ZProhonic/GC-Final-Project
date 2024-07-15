@@ -4,13 +4,14 @@ import { SavedJob } from '../../interface/saved_job';
 import { SavedJobsService } from '../../services/saved-jobs.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-saved-jobs',
   templateUrl: './saved-jobs.component.html',
   styleUrls: ['./saved-jobs.component.css'],
   standalone: true,
-  imports: [FormsModule, CommonModule]
+  imports: [FormsModule, CommonModule, RouterLink]
 })
 export class SavedJobsComponent implements OnInit {
   savedJobs: SavedJob[] = [];

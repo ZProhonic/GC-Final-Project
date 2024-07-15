@@ -26,6 +26,20 @@
     </tbody>
   </table>
 </div>
+
+<!-- ASIDE -->
+<aside>
+  <ul>
+    <li><a [routerLink]="['/saved-jobs']">Saved Jobs</a></li>
+  </ul>
+  <ul>
+    <li><a [routerLink]="['/city-info']">City Information</a></li>
+  </ul>
+  <ul>
+    <li><a [routerLink]="['/job-search']">Job Search</a></li>
+  </ul>
+</aside>
+
 <ng-template #noJobsTemplate>
   <p>No jobs found. Try adjusting your search criteria.</p>
 </ng-template>
