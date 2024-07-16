@@ -1,0 +1,38 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.search-box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    flex-grow: 1;
+    margin-right: 10px;
+    padding: 8px;
+}
+
+.search-button, .view-button, .save-button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.job-list {
+    list-style: none;
+    padding: 0;
+}
+
+.job-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.job-item h3 {
+    margin-top: 0;
+}
