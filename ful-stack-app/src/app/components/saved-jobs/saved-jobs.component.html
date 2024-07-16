@@ -1,7 +1,8 @@
 <!-- src/app/saved-jobs/saved-jobs.component.html -->
-<div class="container">
-  <h2>Saved Jobs</h2>
-  <div *ngIf="savedJobs && savedJobs.length > 0; else noSavedJobsTemplate">
+
+  
+  <div class="container" *ngIf="savedJobs && savedJobs.length > 0; else noSavedJobsTemplate">
+    <h2>Saved Jobs</h2>
     <!-- <ul class="saved-job-list">
       <li *ngFor="let savedJob of savedJobs" class="saved-job-item">
         <h3>{{ savedJob.job.jobTitle || 'Job Title Not Available' }} at {{ savedJob.job.companyName || 'Company Not Available' }}</h3>
@@ -63,6 +64,6 @@
   <ng-template #noSavedJobsTemplate>
     <p>No saved jobs found.</p>
   </ng-template>
-</div>
+
  
 
