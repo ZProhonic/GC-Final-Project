@@ -2,7 +2,20 @@
 
   
   <div class="container" *ngIf="savedJobs && savedJobs.length > 0; else noSavedJobsTemplate">
-    <h2>Saved Jobs</h2>
+      <!-- ASIDE -->
+       <div class="sideNav">
+      <aside class="savedJobsLink">    
+        <ul>
+          <li><a [routerLink]="['/job-search']" routerLinkActive="active">Job Search</a></li>
+        </ul>
+        <ul>
+          <li><a [routerLink]="['/city-info']">City Information</a></li>
+        </ul>
+      </aside>
+    </div>
+    <div class = "jobsSaved">
+          <h2>Saved Jobs</h2>
+
     <!-- <ul class="saved-job-list">
       <li *ngFor="let savedJob of savedJobs" class="saved-job-item">
         <h3>{{ savedJob.job.jobTitle || 'Job Title Not Available' }} at {{ savedJob.job.companyName || 'Company Not Available' }}</h3>
@@ -31,7 +44,7 @@
       <tbody>
         <tr *ngFor ="let job of savedJobs" class="job-item">
           <!-- iterates the array -->
-          <td>{{job.job.jobTitle}}</td> //interpolation syntax
+          <td>{{job.job.jobTitle}}</td> 
           <td>{{job.job.companyName}}</td>
           <td>{{job.job.location}}</td>
           <td>{{job.job.salaryRange}}</td>
@@ -50,20 +63,12 @@
       </tbody>
     </table>
   </div>
-
-    <!-- ASIDE -->
-    <aside>
-      <ul>
-        <li><a [routerLink]="['/job-search']" routerLinkActive="active">Job Search</a></li>
-      </ul>
-      <ul>
-        <li><a [routerLink]="['/city-info']">City Information</a></li>
-      </ul>
-    </aside>
+</div>
+  
 
   <ng-template #noSavedJobsTemplate>
     <p>No saved jobs found.</p>
   </ng-template>
-
+ 
  
 
