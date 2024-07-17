@@ -6,11 +6,12 @@ import { JobListService } from '../../services/job-list.service';
 import { SavedJobsService } from '../../services/saved-jobs.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-job-list',
   templateUrl: './job-list.component.html',
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, RouterLink],
   standalone: true,
   styleUrls: ['./job-list.component.scss']
 })
@@ -37,4 +38,5 @@ export class JobListComponent implements OnInit {
       error => console.error('Error saving job', error)
     );
   }
+  
 }

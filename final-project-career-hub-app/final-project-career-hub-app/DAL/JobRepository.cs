@@ -4,8 +4,8 @@ namespace final_project_career_hub_app.DAL
 {
 	public class JobRepository
 	{
-		private readonly JobDbContext _context;
-		public JobRepository(JobDbContext jobDbContext)
+		private readonly JobsDbContext _context;
+		public JobRepository(JobsDbContext jobDbContext)
 		{
 			_context = jobDbContext;
 		}
