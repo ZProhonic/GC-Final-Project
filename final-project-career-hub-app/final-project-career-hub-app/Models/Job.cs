@@ -13,8 +13,6 @@ public partial class Job
 
     public string? Location { get; set; }
 
-    public string? ZipCode { get; set; }
-
     public string? SalaryRange { get; set; }
 
     public string? JobDescription { get; set; }

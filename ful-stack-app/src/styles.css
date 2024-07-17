@@ -40,6 +40,8 @@
         flex-direction: column;
         /* justify-content: space-around; */
     }
+
+    
     
     ul {
        display: flex; 
