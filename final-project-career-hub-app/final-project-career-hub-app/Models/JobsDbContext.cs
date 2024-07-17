@@ -61,7 +61,7 @@ public partial class JobsDbContext : DbContext
             entity.Property(e => e.SalaryRange)
                 .HasMaxLength(50)
                 .IsUnicode(false);
-          
+
         });
 
         modelBuilder.Entity<SavedJob>(entity =>

@@ -1,5 +1,12 @@
 <div class="grid-container">
-    
+  <aside>
+    <ul>
+      <li><a [routerLink]="['/saved-jobs']">Saved Jobs</a></li>
+    </ul>
+    <ul>
+      <li><a [routerLink]="['/city-info']">City Info</a></li>
+    </ul>
+  </aside>
     <form #searchForm="ngForm" (ngSubmit)="onSearch(searchForm)">
       <h1>TechQuest Jobs</h1>
 
@@ -27,27 +34,14 @@
             <button type="submit" class="button">Search</button>
       </div>
     </form>
-    <div *ngIf="jobSearchResults.length > 0">
-      <h2>Search Results</h2>
-      <div *ngFor="let job of jobSearchResults">
-        <h3>{{ job.jobTitle }}</h3>
-        <button (click)="saveJob(job)">Save Job</button>
-      </div>
-    </div>
+  
   
   
   <!-- ASIDE -->
-  <aside>
-    <ul>
-      <li><a [routerLink]="['/saved-jobs']">Saved Jobs</a></li>
-    </ul>
-    <ul>
-      <li><a [routerLink]="['/city-info']">City Infor</a></li>
-    </ul>
-  </aside>
+  
   
   <!-- FOOTER -->
-  <footer>
+  <footer class="mainpageFooter">
     <address>
       Techquest Jobs <br>
       7711 Innovation Drive, Silicon Valley, CA 94123 <br>
