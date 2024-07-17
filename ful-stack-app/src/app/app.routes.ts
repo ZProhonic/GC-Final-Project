@@ -6,6 +6,7 @@ import { SavedJobsComponent } from './components/saved-jobs/saved-jobs.component
 import { CityInfoComponent } from './components/city-info/city-info.component';
 import { JobListComponent } from './componets/job-list/job-list.component';
 
+// Define the routes
 export const routes: Routes = [
   { path: 'job-search', component: JobSearchComponent },
   { path: 'job-list', component: JobListComponent },

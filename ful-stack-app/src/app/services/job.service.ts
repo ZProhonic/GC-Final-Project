@@ -8,7 +8,8 @@ import { Job } from '../interface/jobs';
   providedIn: 'root'
 })
 export class JobService {
-  private apiUrl = 'https://localhost:7135/api/Jobs';
+
+  private apiUrl = 'http://localhost:5211/api/Jobs';
 
   constructor(private http: HttpClient) {}
 
