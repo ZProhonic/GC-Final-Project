@@ -1,8 +1,22 @@
 <!-- src/app/saved-jobs/saved-jobs.component.html -->
-<div class="container">
-  <h2>Saved Jobs</h2>
-  <div *ngIf="savedJobs && savedJobs.length > 0; else noSavedJobsTemplate">
-    <ul class="saved-job-list">
+
+  
+  <div class="container" *ngIf="savedJobs && savedJobs.length > 0; else noSavedJobsTemplate">
+      <!-- ASIDE -->
+       <div class="sideNav">
+      <aside class="savedJobsLink">    
+        <ul>
+          <li><a [routerLink]="['/job-search']" routerLinkActive="active">Job Search</a></li>
+        </ul>
+        <ul>
+          <li><a [routerLink]="['/city-info']">City Information</a></li>
+        </ul>
+      </aside>
+    </div>
+    <div class = "jobsSaved">
+          <h2>Saved Jobs</h2>
+
+    <!-- <ul class="saved-job-list">
       <li *ngFor="let savedJob of savedJobs" class="saved-job-item">
         <h3>{{ savedJob.job.jobTitle || 'Job Title Not Available' }} at {{ savedJob.job.companyName || 'Company Not Available' }}</h3>
         <p><strong>Location:</strong> {{ savedJob.job.location || 'Location Not Available' }}</p>
@@ -14,22 +28,47 @@
         <p><strong>Description:</strong> {{ savedJob.job.jobDescription || 'Description Not Available' }}</p>
         <p><strong>Salary Range:</strong> {{ savedJob.job.salaryRange || 'Salary Range Not Available' }}</p>
       </li>
-    </ul>
-  </div>
+    </ul> -->
+    <table>
+      <thead>
+        <tr>
+          <th>Job Title</th>
+          <th>Company Name</th>
+          <th>Location</th>
+          <th>Salary Range</th>
+          <th>Experience Level</th>
+          <th>Job Description</th>
+          <th>Save Job</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor ="let job of savedJobs" class="job-item">
+          <!-- iterates the array -->
+          <td>{{job.job.jobTitle}}</td> 
+          <td>{{job.job.companyName}}</td>
+          <td>{{job.job.location}}</td>
+          <td>{{job.job.salaryRange}}</td>
+          <td>{{job.job.experienceLevel}}</td>
+          <td>{{job.job.jobDescription}}</td>
 
-    <!-- ASIDE -->
-    <aside>
-      <ul>
-        <li><a [routerLink]="['/job-search']">Job Search</a></li>
-      </ul>
-      <ul>
-        <li><a [routerLink]="['/city-info']">City Information</a></li>
-      </ul>
-    </aside>
+          <td>
+            <p><strong>Status:</strong>
+              <select [(ngModel)]="job.applicationStatus" (change)="updateJobStatus(job, job.applicationStatus)">
+                <option *ngFor="let status of statuses" [value]="status">{{ status }}</option>
+              </select>
+            </p>
+          </td>
+          <!-- event binding click button save job -->
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+  
 
   <ng-template #noSavedJobsTemplate>
     <p>No saved jobs found.</p>
   </ng-template>
-</div>
+ 
  
 
