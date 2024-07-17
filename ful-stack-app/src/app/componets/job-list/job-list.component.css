@@ -1,4 +1,4 @@
-.container {
+/* .container {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
@@ -36,3 +36,50 @@
 .job-item h3 {
     margin-top: 0;
 }
+ */
+ .layout {
+    display:flex;
+    height: 100vh; 
+ }
+ .sidebar {
+    width: 120px; /* Adjust as needed */
+    background-color:#6b6d84; /* Background color for the sidebar */
+    padding: 25px; /* Padding inside the sidebar */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optional: shadow for better visual separation */
+    position:fixed;
+    top:0;
+    left:0;
+    height: 100%;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  .main-content{
+    margin-left: 150px;
+    display:flex;
+    flex-direction: column;
+    flex:1;
+    padding:20px;
+  }
+  .container {
+    flex: 1; /* Take the remaining space */
+    padding: 20px; /* Padding inside the container */
+  
+ }
+/* .job-list-footer{
+    width:calc(100%-200%);
+    position:;
+    background-color: #f4f4f4; /* Background color for the footer */
+    /*padding: 10px; /* Padding inside the footer */
+    /*text-align: center; /* Center align text */
+    /*box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    margin-left: 170px;;
+ }  */
+ .ng-template{
+    flex: 1; /* Ensure this also takes up remaining space if no jobs are available */
+    display: flex;
+    flex-direction: column;
+    justify-content: right; /* Center the no-jobs content */
+    align-items: right; /* Center the no-jobs content horizontally */
+    padding: 0px; /* Padding to ensure spacing within the no-jobs template */
+    text-align:center; /* Center align text */
+    
+ }
