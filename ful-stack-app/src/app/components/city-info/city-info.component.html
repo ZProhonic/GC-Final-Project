@@ -1,42 +1,32 @@
 <!-- src/app/city-info/city-info.component.html -->
-<div>
-  <aside>
-    <ul>
-      <li><a [routerLink]="['/saved-jobs']">Saved Jobs</a></li>
-    </ul>
-    <ul>
-      <li><a [routerLink]="['/job-search']">Job Search</a></li>
-    </ul>
-  </aside>
-</div>
-<div class="form-group">
-  <h2>City Information</h2>
-
-  <input [(ngModel)]="city" placeholder="Enter city name">
-  <p>{{city}}</p>
-  <button class="button" (click)="getCityInfo()">Get City Info</button>
-  <div *ngIf="cityInfo">
-    <div *ngIf="cityInfo.data && cityInfo.data.length > 0">
-      <div *ngFor="let item of cityInfo.data">
-        <h3>{{ item.name }}</h3>
-        <p>{{ item.address_obj?.address_string }}</p>
-      </div>
+<div class="city-container">
+  <div>
+    <aside class="sidebar">
+      <ul>
+        <li><a [routerLink]="['/saved-jobs']">Saved Jobs</a></li>
+      </ul>
+      <ul>
+        <li><a [routerLink]="['/job-search']">Job Search</a></li>
+      </ul>
+    </aside>
   </div>
+  <div class="city-content">
+    <h2>City Information</h2>
+    <label for="city">City</label>
 
-    
- 
+    <input [(ngModel)]="city" placeholder="Enter city name">
+    <p>{{city}}</p>
+    <button class="city-button" (click)="getCityInfo()">Get City Info</button>
+    <div *ngIf="cityInfo">
+      <div *ngIf="cityInfo.data && cityInfo.data.length > 0">
+        <div *ngFor="let item of cityInfo.data">
+          <h3>{{ item.name }}</h3>
+          <p>{{ item.address_obj?.address_string }}</p>
+        </div>
+      </div>
+    </div>
     <div *ngIf="!cityInfo.data || cityInfo.data.length === 0">
-      <p>No data available for the specified city.</p>
+        <p>No data available for the specified city.</p>
     </div>
   </div>
 </div>
-<footer class="job-list-footer">
-  <address>
-    Techquest Jobs <br>
-    7711 Innovation Drive, Silicon Valley, CA 94123 <br>
-    555-123-4567 | info&#64;techquestjobs.com
-    
-  </address>
-
-  <p class="copy">&copy; 2024 TechQuest Jobs. All Rights Reserved.</p>
-</footer>
