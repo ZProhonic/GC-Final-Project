@@ -14,7 +14,7 @@ import { Router, RouterModule } from '@angular/router';
   imports: [FormsModule, CommonModule, RouterModule]
 })
 export class CityInfoComponent implements OnInit {
-  city: string = 'detroit';
+  city: string = '';
   cityInfo: tripadvisor | any;
   
 

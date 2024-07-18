@@ -1,0 +1,52 @@
+.city-container{
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+}
+.city-content{
+    padding:20px;
+}
+.city-content h2{
+    margin-top:0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 50px;
+        
+}
+.city-content input{
+    width: 18rem;
+    height: 3.4rem;
+    margin: 0.85rem;
+    background-color: #fff;
+    color: #000;
+    border-radius: 20px;
+}
+.city-content label {
+    font-size: 1.8rem;
+    font-weight: 1000;
+}
+.city-button {
+    border: 0.0625rem solid #000;
+        box-shadow: 0rem 0.1875rem;
+        cursor: pointer;
+        width: 11.25rem;
+        height: 2.5625rem;
+        background-color: #6b6d84;
+        color: #000;
+        border-radius: 2.75rem;
+        margin: 0.875rem;
+        position: relative;
+        left: 15.0rem;
+        bottom: 0.6rem;
+        font-size: 1.75rem;
+        font-weight: 250;
+}
+.sidebar {
+    width: 120px; /* Adjust as needed */
+    background-color:#6b6d84; /* Background color for the sidebar */
+    padding: 25px; /* Padding inside the sidebar */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optional: shadow for better visual separation */
+    position:fixed;
+    top:0;
+    left:0;
+    height: 100%;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
